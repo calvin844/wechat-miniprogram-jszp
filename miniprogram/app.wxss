@@ -1,0 +1,133 @@
+/**app.wxss**/
+@import "wxParse/wxParse.wxss";
+
+page {
+  background: #e5e5e5;
+  padding: 0 0 45px 0;
+}
+
+text,
+navigator {
+  font-size: 12px;
+  line-height: 15px;
+}
+
+.copyright {
+  margin: 0 0 30rpx 0;
+  display: block;
+  width: 100%;
+  height: 35px;
+}
+
+.copyright text {
+  text-align: center;
+  font-size: 12px;
+  margin: 0rpx 0 10rpx 0;
+  display: block;
+}
+
+.clear {
+  clear: both;
+}
+
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}
+
+#page_box {
+  margin: 18px 0px 18px 0px;
+  text-align: center;
+}
+
+#page_box view {
+  display: inline-block;
+  background: #fff;
+  padding: 6px 0px 6px 0px;
+  width: 25%;
+}
+
+#page_box view span {
+  color: #313131;
+}
+
+#page_box view button {
+  padding: 6px 0px 6px 0px;
+  background: none;
+  margin: 0;
+  min-height: auto;
+  width: auto;
+  font-weight: normal;
+  font-size: 12px;
+}
+
+#page_box view button span {
+  color: #188eee;
+}
+
+#page_box view.per {
+  float: left;
+}
+
+#page_box view.per image {
+  margin: 0px 2px 0px 0px;
+  width: 10px;
+  height: 10px;
+}
+
+#page_box view.next {
+  float: right;
+}
+
+#page_box view.cur_box {
+  float: left;
+}
+
+#page_box view.next image {
+  margin: 0px 0px 0px 2px;
+  width: 10px;
+  height: 10px;
+}
+
+#page_box picker {
+  display: inline-block;
+  background: #fff;
+  margin: 0px 5px 0px 5px;
+  position: relative;
+  height: 40px;
+  width: calc(50% - 40px);
+}
+
+#page_box picker .cur_box {
+  position: absolute;
+  top: 0px;
+  left: 0;
+  margin-left: -10px;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+
+#page_box picker text {
+  line-height: 40px;
+  font-size: 14px;
+}
+
+#page_box picker image {
+  width: 14px;
+  height: 8px;
+  margin: 0px 0px 0px 5px;
+}
+
+#page_box view.next_disable button span {
+  color: #999;
+}
+
+#page_box view.per_disable button span {
+  color: #999;
+}

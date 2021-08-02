@@ -1,0 +1,120 @@
+{
+  "miniprogramRoot": "miniprogram/",
+  "cloudfunctionRoot": "cloudfunctions/",
+  "setting": {
+    "urlCheck": false,
+    "es6": true,
+    "enhance": true,
+    "postcss": true,
+    "minified": true,
+    "newFeature": true,
+    "coverView": true,
+    "autoAudits": false,
+    "showShadowRootInWxmlPanel": true,
+    "scopeDataCheck": false,
+    "checkInvalidKey": true,
+    "checkSiteMap": true,
+    "uploadWithSourceMap": true,
+    "useMultiFrameRuntime": false,
+    "useApiHook": true,
+    "babelSetting": {
+      "ignore": [],
+      "disablePlugins": [],
+      "outputPath": ""
+    },
+    "useIsolateContext": true,
+    "useCompilerModule": false,
+    "userConfirmedUseCompilerModuleSwitch": false,
+    "packNpmManually": false,
+    "packNpmRelationList": [],
+    "minifyWXSS": true
+  },
+  "appid": "wx62bb8320a3477913",
+  "projectname": "jszp",
+  "libVersion": "2.8.1",
+  "simulatorType": "wechat",
+  "simulatorPluginLibVersion": {},
+  "condition": {
+    "search": {
+      "list": []
+    },
+    "conversation": {
+      "list": []
+    },
+    "plugin": {
+      "list": []
+    },
+    "game": {
+      "list": []
+    },
+    "gamePlugin": {
+      "list": []
+    },
+    "miniprogram": {
+      "list": [
+        {
+          "id": 0,
+          "name": "pages/jobs/details/details",
+          "pathName": "pages/jobs/details/details",
+          "query": "jobid=187773",
+          "scene": null
+        },
+        {
+          "id": 1,
+          "name": "pages/jobs/details/details",
+          "pathName": "pages/jobs/details/details",
+          "query": "scene=jobid%3D188362",
+          "scene": null
+        },
+        {
+          "id": 2,
+          "name": "pages/company/details/details",
+          "pathName": "pages/company/details/details",
+          "query": "scene=companyid%3D143503",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/user/login",
+          "pathName": "pages/user/login",
+          "query": "scene=jobid%3D187100%2526uid%253D453384",
+          "scene": null
+        },
+        {
+          "id": 4,
+          "name": "pages/article/details/details",
+          "pathName": "pages/article/details/details",
+          "query": "scene=articleid%3D284960",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/article/list/list",
+          "pathName": "pages/article/list/list",
+          "query": "scene=articleid%3D284960",
+          "scene": null
+        },
+        {
+          "id": 6,
+          "name": "pages/jobs/list/list",
+          "pathName": "pages/jobs/list/list",
+          "query": "scene=articleid%3D284960",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/index/index",
+          "pathName": "pages/index/index",
+          "query": "scene=articleid%3D284960",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/company/list/list",
+          "pathName": "pages/company/list/list",
+          "scene": null
+        }
+      ]
+    }
+  }
+}

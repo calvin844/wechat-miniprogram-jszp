@@ -1,0 +1,269 @@
+.top_box swiper {
+  background: #999;
+}
+
+.top_box swiper image {
+  width: 100%;
+}
+
+.top_menu_box {
+  background: #fff;
+  margin: 0px 0px 10px 0px;
+}
+
+.top_menu_box view {
+  float: left;
+  width: 25%;
+  text-align: center;
+  padding: 10px 0px 10px 0px;
+}
+
+.top_menu_box image {
+  width: 37px;
+  height: 37px;
+}
+
+.top_menu_box text {
+  display: block;
+  width: 100%;
+  text-align: center;
+  line-height: 15px;
+  font-size: 12px;
+  color: #999;
+}
+
+.emergency_box {
+  background: #fff;
+  margin: 0px 0px 10px 0px;
+  padding: 15px 15px 0px 15px;
+}
+
+.emergency_box .box_title {
+  color: #212121;
+  font-size: 16px;
+  margin: 0px 0px 15px 0px;
+  font-weight: bold;
+  float: left;
+}
+
+.emergency_box swiper {
+  width: 100%;
+  float: left;
+}
+
+.emergency_box .item {
+  width: calc(100% - 30px);
+  height: 38px;
+  padding: 15px 10px 15px 10px;
+  background: #fff;
+  margin: 0px 0px 10px 0px;
+  border-radius: 5px;
+  border: 1px solid #ededed;
+  overflow: hidden;
+}
+
+.emergency_box .item .job_box {
+  width: 100%;
+  float: left;
+}
+
+.emergency_box .item .job_box navigator {
+  font-size: 16px;
+  color: #202020;
+  font-weight: normal;
+  float: left;
+  height: 20px;
+  line-height: 20px;
+  max-width: 65%;
+  overflow: hidden;
+}
+
+.emergency_box .item .job_box span {
+  float: right;
+  font-weight: bold;
+  font-size: 14px;
+  color: #f3711a;
+  line-height: 20px;
+}
+
+.emergency_box .item .company_box {
+  width: 100%;
+  float: left;
+  margin: 5px 0px 0px 0px;
+}
+
+.emergency_box .item .company_box navigator {
+  color: #999;
+  font-weight: normal;
+  float: left;
+  height: 20px;
+  line-height: 20px;
+  max-width: 75%;
+  overflow: hidden;
+  font-size: 12px;
+}
+
+.emergency_box .item .company_box span {
+  float: right;
+  color: #999;
+  max-width: 25%;
+  font-size: 12px;
+  line-height: 20px;
+}
+
+.jobs_box {
+  background: #fff;
+  padding: 15px 15px 0px 15px;
+}
+
+.jobs_box .box_title {
+  color: #212121;
+  font-size: 16px;
+  margin: 0px 0px 15px 0px;
+  font-weight: bold;
+}
+
+.jobs_box .jobs_list {
+  margin: 10px 0px 0px 0px;
+}
+
+.jobs_box .jobs_list view {
+  width: 100%;
+  height: 45px;
+  padding: 10px 0px 10px 0px;
+  background: #fff;
+  margin: 0px 0px 10px 0px;
+  border-bottom: 1px solid #ededed;
+}
+
+.jobs_box .jobs_list view .job_box {
+  width: 100%;
+  float: left;
+  height: auto;
+  padding: 0;
+  margin: 0;
+  border: none;
+}
+
+.jobs_box .jobs_list view .job_box navigator {
+  font-size: 16px;
+  color: #202020;
+  font-weight: normal;
+  float: left;
+  height: 20px;
+  line-height: 20px;
+  max-width: 65%;
+  overflow: hidden;
+}
+
+.jobs_box .jobs_list view .job_box text {
+  float: right;
+  font-weight: bold;
+  font-size: 14px;
+  color: #f3711a;
+}
+
+.jobs_box .jobs_list view .company_box {
+  width: 100%;
+  float: left;
+  margin: 5px 0px 0px 0px;
+  height: auto;
+  padding: 0;
+  border: none;
+}
+
+.jobs_box .jobs_list view .company_box navigator {
+  color: #999;
+  font-weight: normal;
+  float: left;
+  height: 20px;
+  line-height: 20px;
+  max-width: 75%;
+  overflow: hidden;
+}
+
+.jobs_box .jobs_list view .company_box text {
+  float: right;
+  color: #999;
+  max-width: 25%;
+  line-height: 20px;
+}
+
+.more_list {
+  color: #188eee;
+  width: 100%;
+  text-align: center;
+  padding: 5px 0px 10px 0px;
+}
+
+.logo_ad_box {
+  float: left;
+  background: #fff;
+  width: calc(100% - 30px);
+  padding: 15px 15px 0px 15px;
+}
+
+.logo_ad_box .box_title {
+  color: #212121;
+  font-size: 16px;
+  margin: 0px 0px 15px 0px;
+  font-weight: bold;
+  display: block;
+  width: 100%;
+}
+
+.logo_ad_box .ad_item {
+  float: left;
+  margin: 0px 5px 10px 5px;
+  width: calc(50% - 10px);
+}
+
+.logo_ad_box .ad_item image {
+  width: 100%;
+}
+
+.article_box {
+  background: #fff;
+  padding: 15px 15px 0px 15px;
+  margin: 0px 0px 15px 0px;
+}
+
+.article_box .box_title {
+  color: #212121;
+  font-size: 16px;
+  margin: 0px 0px 15px 0px;
+  font-weight: bold;
+  display: block;
+  width: 100%;
+}
+
+.article_box .article_list {
+  margin: 10px 0px 0px 0px;
+  float: left;
+  width: 100%;
+}
+
+.article_box .article_item {
+  width: 100%;
+  height: 45px;
+  padding: 10px 0px 10px 0px;
+  background: #fff;
+  margin: 0px 0px 10px 0px;
+  border-bottom: 1px solid #ededed;
+}
+
+.article_box .article_item navigator {
+  display: inline-block;
+  height: 20px;
+  font-size: 16px;
+  color: #202020;
+  line-height: 20px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
+}
+
+.article_box .article_item text {
+  color: #999;
+}

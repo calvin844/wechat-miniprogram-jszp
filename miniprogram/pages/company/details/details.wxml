@@ -1,0 +1,53 @@
+<!--miniprogram/pages/company/details/details.wxml-->
+<view class="top_box">
+  <image class="top_bg" src="/images/company_top_bg.png" mode="widthFix" />
+</view>
+<view class="info_box">
+  <view class="top_info_box">
+    <view wx:if="{{ companyDetails.logo }}" class="logo_box">
+      <image class="logo" src="http://www.jiaoshizhaopin.net/data/logo/{{ companyDetails.logo }}" mode="widthFix" />
+    </view>
+    <view wx:else class="logo_box">
+      <image class="logo" src="/images/no_logo.jpg" mode="widthFix" />
+    </view>
+    <view class="name_box">
+      <text class="name">{{ companyDetails.companyname }}</text>
+    </view>
+    <view class="district_box">
+      <text class="district">{{ companyDetails.district_cn }}</text>
+    </view>
+  </view>
+  <view class="bottom_info_box">
+    <view class="des_box">
+      <text class="box_title">学校简介</text>
+      <view class="box_content">
+        <text>{{ companyDetails.contents }}</text>
+      </view>
+    </view>
+    <block class="clear"></block>
+    <view class="jobs_box" wx:if="{{ companyJobs.length !== 0 }}">
+      <text class="box_title">在招职位</text>
+      <block wx:for="{{ companyJobs }}" wx:key="key">
+        <view class="jobs_item">
+          <navigator url="/pages/jobs/details/details?scene=jobid%3D{{ item.id }}">
+            <text>{{ item.jobs_name }}</text>
+            <text class="job_go">></text>
+          </navigator>
+        </view>
+      </block>
+    </view>
+    <view class="clear"></view>
+    <view class="photo_box" wx:if="{{ companyPhotos.length !== 0 }}">
+      <text class="box_title">学校照片</text>
+      <swiper indicator-dots="false" autoplay="true" interval="5000" duration="1000">
+        <block wx:for="{{ companyPhotos }}" wx:key="key">
+          <swiper-item>
+            <image src="http://www.jiaoshizhaopin.net/data/companyimg/original/{{ item.img }}" class="slide-image" />
+          </swiper-item>
+        </block>
+      </swiper>
+    </view>
+    <block class="clear"></block>
+  </view>
+<include src="/pages/public/footer" />
+</view>

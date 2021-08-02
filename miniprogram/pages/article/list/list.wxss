@@ -1,0 +1,112 @@
+/* miniprogram/pages/article/list/list.wxss */
+
+swiper {
+  background: #999;
+}
+
+swiper image {
+  width: 100%;
+}
+
+.top_box {
+  position: relative;
+}
+
+.top_box .search_box {
+  position: absolute;
+  top: 10px;
+  left: 13px;
+  width: 93%;
+  height: 35px;
+  border-radius: 17px;
+  overflow: hidden;
+  background: #fff;
+  z-index: 3;
+  border: 1px solid #999;
+}
+
+.top_box .search_box input.key {
+  color: #202020;
+  float: left;
+  padding: 8px 10px;
+  width: calc(100% - 60px);
+  height: 18px;
+  line-height: 18px;
+  background: #fff;
+}
+
+.top_box .search_box image {
+  float: right;
+  width: 20px;
+  height: 20px;
+  margin: 7px 10px 7px 10px;
+}
+
+.top_box .select_box {
+  width: 100%;
+  height: 37px;
+  float: left;
+  background: #fff;
+  position: relative;
+  z-index: 2;
+}
+
+.top_box .select_box view.select_bt {
+  float: left;
+  width: 50%;
+  height: 37px;
+  text-align: center;
+  line-height: 37px;
+}
+
+.top_box .select_box view.select_bt view.picker {
+  height: 37px;
+  line-height: 37px;
+}
+
+.top_box .select_box view.select_bt image {
+  display: inline-block;
+  width: 8px;
+  height: 5px;
+  margin: 0px 0px 0px 5px;
+}
+
+.top_box .select_box view.hover text {
+  color: #188eee;
+}
+
+.list_box {
+  padding: 18px 15px 0px 15px;
+}
+
+.list_box ul {
+  width: 100%;
+  display: block;
+}
+
+.list_box ul li {
+  width: calc(100% - 20px);
+  display: block;
+  height: 38px;
+  padding: 15px 10px 15px 10px;
+  background: #fff;
+  margin: 0px 0px 10px 0px;
+}
+
+.list_box ul li text {
+  width: 100%;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  display: block;
+  height: 20px;
+  overflow: hidden;
+  font-size: 16px;
+  color: #202020;
+  line-height: 20px;
+}
+
+.list_box ul li span {
+  color: #999;
+  font-size: 12px;
+  margin: 5px 0 0 0;
+}

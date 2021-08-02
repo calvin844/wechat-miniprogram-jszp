@@ -1,0 +1,87 @@
+<!--miniprogram/pages/jobs/list/list.wxml-->
+<view class="top_box">
+  <view class="search_box">
+    <input type="text" class="key" placeholder="请输入关键字" confirm-type="search" bindconfirm='changeKeyword' value="{{curOption[4]}}" />
+    <image src="/images/search.png" />
+  </view>
+  <swiper indicator-dots="false" autoplay="true" interval="5000" duration="1000" style="height:{{swiperH}}">
+    <block wx:for="{{ adList.m_home_104 }}" wx:key="key">
+      <swiper-item>
+        <image bindload='imgHeight' src="http://m.jiaoshizhaopin.net/{{ item.img_path }}" mode="widthFix" />
+      </swiper-item>
+    </block>
+  </swiper>
+  <view class="select_box">
+    <view data-type="district" id="district_bt" class="select_bt {{curOption[0]?'hover':''}}">
+      <picker mode="multiSelector" id="0" bindcancel="bindPickerCancel" bindchange="bindMultiPickerChange" bindcolumnchange="bindMultiPickerColumnChange" value="{{districtIndex}}" range="{{districtList}}">
+        <view class="picker">
+          <text>{{curOption[0]?curOption[0]:"地区"}}</text>
+          <image src="{{curOption[0]?'/images/to_up2.png':'/images/to_down2.png'}}" />
+        </view>
+      </picker>
+    </view>
+    <view data-type="category" id="category_bt" class="select_bt {{curOption[1]?'hover':''}}">
+      <picker bindcancel="bindPickerCancel" id="1" mode="multiSelector" bindcolumnchange="bindCategoryMultiPickerColumnChange" bindchange="bindCategoryPickerChange" value="{{categoryIndex}}" range="{{categoryList}}">
+        <view class="picker">
+          <text>{{curOption[1]?curOption[1]:"分类"}}</text>
+          <image src="{{curOption[1]?'/images/to_up2.png':'/images/to_down2.png'}}" />
+        </view>
+      </picker>
+    </view>
+    <view data-type="education" id="education_bt" class="select_bt {{curOption[2]?'hover':''}}">
+      <picker bindcancel="bindPickerCancel" id="2" bindchange="bindEducationPickerChange" value="{{educationIndex}}" range="{{educationList}}">
+        <view class="picker">
+          <text>{{curOption[2]?curOption[2]:"学历"}}</text>
+          <image src="{{curOption[2]?'/images/to_up2.png':'/images/to_down2.png'}}" />
+        </view>
+      </picker>
+    </view>
+    <view data-type="experience" id="experience_bt" class="select_bt {{curOption[3]?'hover':''}}">
+      <picker bindcancel="bindPickerCancel" id="3" bindchange="bindExperiencePickerChange" value="{{experienceIndex}}" range="{{experienceList}}">
+        <view class="picker">
+          <text>{{curOption[3]?curOption[3]:"经验"}}</text>
+          <image src="{{curOption[3]?'/images/to_up2.png':'/images/to_down2.png'}}" />
+        </view>
+      </picker>
+    </view>
+  </view>
+</view>
+<view class="list_box">
+  <ul>
+    <block wx:for="{{ jobsList }}" wx:key="key">
+      <li>
+        <navigator url="/pages/jobs/details/details?scene=jobid%3D{{ item.id }}">
+          <view class="job_box">
+            <navigator url="/pages/jobs/details/details?scene=jobid%3D{{ item.id }}">{{ item.jobs_name }}</navigator>
+            <span>{{ item.wage_cn }}</span>
+          </view>
+          <view class="company_box">
+            <navigator url="/pages/company/details/details?scene=companyid%3D{{ item.company_id }}">[{{ item.district_cn }}] {{ item.companyname }}</navigator>
+            <span>{{ item.refreshtime_cn }}</span>
+          </view>
+        </navigator>
+      </li>
+    </block>
+  </ul>
+  <view id="page_box">
+    <view class="per {{pageData.now_page == 1?'per_disable':''}}">
+      <button class="page_button" bindtap="changePage" data-value="{{pageData.per_page}}">
+        <image src="/images/to_left{{pageData.now_page == 1?'':'2'}}.png" />
+        <span>上一页</span>
+      </button>
+    </view>
+    <picker bindchange="bindPagePickerChange" value="{{pageIndex}}" range="{{pageData.page_list}}">
+      <view class="cur_box">
+        <text class="picker">第 {{ pageData.now_page }} 页</text>
+        <image src="/images/to_down3.png" />
+      </view>
+    </picker>
+    <view class="next {{pageData.now_page == pageData.totalpage?'next_disable':''}}">
+      <button class="page_button" bindtap="changePage" data-value="{{pageData.next_page}}">
+        <span>下一页</span>
+        <image src="/images/to_right{{pageData.now_page == pageData.totalpage?'':'2'}}.png" />
+      </button>
+    </view>
+  </view>
+</view>
+<include src="/pages/public/footer" />

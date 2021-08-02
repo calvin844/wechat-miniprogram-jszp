@@ -1,0 +1,80 @@
+<import src="../../../wxParse/wxParse.wxml" />
+<view class="title_box">
+  <text class="article_title">{{articleDetails.title}}</text>
+</view>
+<view class="info_box">
+  <view class="left">
+    <text class="a">{{articleDetails.endtime_cn}}截止</text>
+    <text class="b">{{time<articleDetails.endtime?"招聘中":"招聘结束"}}</text>
+    <text class="a">阅读</text>
+    <text class="b">{{articleDetails.click}}</text>
+  </view>
+  <view class="right">
+    <text class="a">{{articleDetails.addtime_cn}}</text>
+  </view>
+</view>
+<view class="content_box {{isShow ? 'on' : ''}}">
+  <template is="wxParse" data="{{ wxParseData:articleDetails.content.nodes }}" />
+  <view class="article_jobs_box">
+    <view class="icon_title">
+      <image src="/images/title_icon.png" />
+      <text class="box_title">招聘职位</text>
+    </view>
+    <ul class="box_jobs">
+      <block wx:for="{{ articleDetails.jobs }}" wx:key="key">
+        <li>
+          <navigator url="#">{{ item.job_name }}</navigator>
+        </li>
+      </block>
+    </ul>
+  </view>
+  <view class="clear"></view>
+  <view class="show_more" bindtap="toShow">
+    <text>{{isShow ? '收起内容' : '展开内容'}}</text>
+    <image class="icon" src="{{isShow ? '/images/to_up.png' : '/images/to_down.png'}}" />
+  </view>
+</view>
+<view class="join_box">
+  <view class="icon_title">
+    <image src="/images/title_icon.png" />
+    <text class="box_title">报名信息</text>
+  </view>
+  <view class="join_content">
+    <view wx:if="{{ user_info }}">
+      <ul>
+        <li>
+          <b>地区：</b>
+          <span>{{articleDetails.district_cn}}</span>
+        </li>
+        <li>
+          <b>报名方式：</b>
+          <span>{{articleDetails.join_way}}</span>
+        </li>
+        <li>
+          <b>方式内容：</b>
+          <span>{{articleDetails.email}}</span>
+        </li>
+        <li>
+          <b>联系人：</b>
+          <span>{{articleDetails.contact_one}}</span>
+        </li>
+        <li>
+          <b>电话：</b>
+          <span>{{articleDetails.telephone_one}}</span>
+        </li>
+        <li wx:if="{{articleDetails.site != '?????'}}">
+          <b>网址：</b>
+          <span>{{articleDetails.site}}</span>
+        </li>
+        <li wx:if="{{articleDetails.attachment != ''}}">
+          <b>附件：</b>
+          <span>请使用电脑版下载相应附件。</span>
+        </li>
+      </ul>
+    </view>
+    <view class="login_box" bindtap="toLogin" wx:else>
+      <text decode="{{true}}" class="login_text">点击立即登陆，免费查看报名方式</text>
+    </view>
+  </view>
+</view>
+<include src="/pages/public/footer" />

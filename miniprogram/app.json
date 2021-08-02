@@ -1,0 +1,55 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/jobs/list/list",
+    "pages/jobs/details/details",
+    "pages/company/list/list",
+    "pages/company/details/details",
+    "pages/article/list/list",
+    "pages/article/details/details",
+    "pages/user/login/login",
+    "pages/public/footer"
+  ],
+  "tabBar": {
+    "custom": true,
+    "color": "#999999",
+    "selectedColor": "#188eee",
+    "borderStyle": "black",
+    "backgroundColor": "#f7f9fa",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "images/tab_index.png",
+        "selectedIconPath": "images/tab_index_hl.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/jobs/list/list",
+        "iconPath": "images/tab_jobs.png",
+        "selectedIconPath": "images/tab_jobs_hl.png",
+        "text": "职位"
+      },
+      {
+        "pagePath": "pages/article/list/list",
+        "iconPath": "images/tab_article.png",
+        "selectedIconPath": "images/tab_article_hl.png",
+        "text": "简章"
+      },
+      {
+        "pagePath": "pages/company/list/list",
+        "iconPath": "images/tab_company.png",
+        "selectedIconPath": "images/tab_company_hl.png",
+        "text": "企业"
+      }
+    ]
+  },
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#F6F6F6",
+    "navigationBarTitleText": "教师招聘网",
+    "navigationBarTextStyle": "black"
+  },
+  "sitemapLocation": "sitemap.json",
+  "style": "v2"
+}

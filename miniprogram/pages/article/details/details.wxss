@@ -1,0 +1,162 @@
+page {
+  background: #fff;
+  padding: 0px 0px 20px 0px;
+}
+
+.clear {
+  clear: both;
+}
+
+.icon_title image {
+  width: 15px;
+  height: 15px;
+  margin: 0 5px 0 0;
+}
+
+.icon_title text {
+  font-size: 14px;
+  color: #313131;
+}
+
+.title_box {
+  margin: 10px;
+}
+
+.title_box text {
+  color: #333;
+  font-size: 16px;
+  line-height: 22px;
+  margin: 0px 0px 20px 0px;
+}
+
+.info_box {
+  margin: 10px 10px 20px 10px;
+  width: calc(100% - 20px);
+  float: left;
+  border-bottom: 1px solid #c5c5c5;
+  padding: 0px 0px 10px 0px;
+}
+
+.info_box .left {
+  float: left;
+}
+
+.info_box .right {
+  float: right;
+}
+
+.info_box text {
+  font-size: 12px;
+  margin: 0px 5px 0px 0px;
+}
+
+.info_box text.a {
+  color: #999;
+}
+
+.info_box text.b {
+  color: #f3711a;
+}
+
+.content_box {
+  height: 300px;
+  overflow: hidden;
+  margin: 10px 10px 20px 10px;
+  width: calc(100% - 20px);
+  border-bottom: 1px solid #c5c5c5;
+  padding: 0px 0px 30px 0px;
+  position: relative;
+}
+
+.on {
+  height: auto;
+  display: block;
+  text-overflow: clip;
+}
+
+.content_box .show_more {
+  width: 100%;
+  background: #fff;
+  position: absolute;
+  bottom: 0px;
+  left: 50%;
+  margin: 0px 0px 0px -50%;
+  text-align: center;
+  padding: 5px 0 5px 0;
+}
+
+.content_box .show_more text {
+  font-size: 14px;
+  color: #f3711a;
+}
+
+.content_box .show_more image {
+  height: 10px;
+  width: 15px;
+  margin: 0 0 0 5px;
+}
+
+.content_box .article_jobs_box {
+  margin: 15px 0px 15px 0px;
+}
+
+.content_box .article_jobs_box ul.box_jobs {
+  float: left;
+  width: 100%;
+  overflow: hidden;
+  margin: 10px 0px 10px 0px;
+}
+
+.content_box .article_jobs_box ul.box_jobs li {
+  float: left;
+  padding: 2px 5px 2px 5px;
+  border-radius: 3px;
+  border: 1px solid #dbdcdd;
+  margin: 0px 10px 10px 0px;
+}
+
+.content_box .article_jobs_box ul.box_jobs li navigator {
+  font-size: 14px;
+  color: #999;
+}
+
+.join_box {
+  margin: 0px 10px 15px 10px;
+  border-bottom: 1px solid #c5c5c5;
+  padding: 0 0 10px 0;
+}
+
+.join_box .join_content {
+  padding: 10px 0px 0px 0px;
+}
+
+.join_box .join_content .login_box {
+  margin: 0px 0px 10px 0px;
+  text-align: center;
+}
+
+.join_box .join_content .login_text {
+  font-size: 14px;
+  display: inline-block;
+  color: #313131;
+}
+
+.join_box .join_content ul {
+  margin: 15px 0px 0px 0px;
+}
+
+.join_box .join_content li {
+  display: block;
+  margin: 0px 0px 5px 0px;
+}
+
+.join_box .join_content li b {
+  color: #313131;
+  font-size: 14px;
+}
+
+.join_box .join_content li span {
+  color: #999;
+  font-size: 14px;
+  line-height: 25px;
+}

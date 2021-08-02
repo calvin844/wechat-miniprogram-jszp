@@ -1,0 +1,105 @@
+/* miniprogram/pages/jobs/details/details.wxss */
+
+page {
+  background: #f1f1f1;
+  padding: 0px 0px 40px 0px;
+}
+
+.job_name {
+  margin: 10px;
+}
+
+.job_name text {
+  font-size: 1.2rem;
+  font-weight: bolder;
+}
+
+.company_box {
+  background: #fff;
+  border-radius: 5px;
+  width: calc(100% - 30px);
+  display: flex;
+  flex-direction: row;
+  padding: 10px 5px 10px 5px;
+  margin: 0 10px 10px 10px;
+}
+
+.company_box navigator {
+  width: 100%;
+}
+
+.company_box .company_logo {
+  float: left;
+  width: 150rpx;
+}
+
+.company_box .company_name {
+  margin: 0 0 0 5px;
+  display: inline-block;
+  width: calc(90% - 150rpx);
+  font-size: 1rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  line-height: 23px;
+}
+
+.job_box {
+  background: #fff;
+  border-radius: 5px;
+  width: calc(100% - 30px);
+  padding: 10px 5px 10px 5px;
+  float: left;
+  margin: 0px 10px 15px 10px;
+}
+
+.job_box .job_info view {
+  float: left;
+  margin: 0px 0px 10px 0px;
+  width: 100%;
+}
+
+.job_box .job_info view text {
+  float: left;
+  color: #999;
+  line-height: 20px;
+}
+
+.job_box .job_info .info_icon {
+  float: left;
+  width: 40rpx;
+  margin: 0 5px 0px 0px;
+}
+
+.job_box .job_info .job_des .title {
+  width: calc(100% - 10px);
+  background: #c3dff8;
+  padding: 10px 5px;
+  color: #065eaa;
+  font-weight: bold;
+  font-size: 0.8rem;
+}
+
+.job_box .job_info .job_des .des {
+  margin: 10px 0px 0px 0px;
+  line-height: 50rpx;
+  font-size: 0.8rem;
+  color: #333;
+}
+
+.delivery_box {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  height: 40px;
+  background: #f3711a;
+}
+
+.delivery {
+  display: block;
+  width: 100%;
+  height: 40px;
+  background: none;
+  color: #fff;
+}

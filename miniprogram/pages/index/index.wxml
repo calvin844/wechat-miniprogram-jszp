@@ -1,0 +1,135 @@
+<view class="top_box">
+  <swiper indicator-dots="false" autoplay="true" interval="5000" duration="1000" style="height:{{swiperH}}">
+    <block wx:for="{{ adList.m_home_104 }}" wx:key="key">
+      <swiper-item>
+        <image bindload='imgHeight' src="http://m.jiaoshizhaopin.net/{{ item.img_path }}" mode="widthFix" />
+      </swiper-item>
+    </block>
+  </swiper>
+</view>
+<view class="top_menu_box">
+  <view>
+    <navigator open-type="switchTab" url="/pages/company/list/list">
+      <image src="/images/index_my.png" mode="widthFix" />
+      <text>企业大全</text>
+    </navigator>
+  </view>
+  <view>
+    <navigator open-type="switchTab" url="/pages/jobs/list/list">
+      <image src="/images/index_jobs.png" mode="widthFix" />
+      <text>最新职位</text>
+    </navigator>
+  </view>
+  <view>
+    <navigator open-type="switchTab" url="/pages/article/list/list">
+      <image src="/images/index_article.png" mode="widthFix" />
+      <text>招聘简章</text>
+    </navigator>
+  </view>
+  <view>
+    <navigator url="#">
+      <image src="/images/index_community.png" mode="widthFix" />
+      <text>教师社区</text>
+    </navigator>
+  </view>
+</view>
+<view class="emergency_box">
+  <text class="box_title">急聘职位</text>
+  <swiper indicator-dots="false" autoplay="true" interval="3000" duration="1000" style="height:{{swiperH}}">
+    <swiper-item>
+      <block wx:for="{{ EmergencyJobList }}" wx:key="key">
+        <block wx:if="{{index<2}}">
+          <view class="item" data-k="{{ index }}">
+            <view class="job_box">
+              <navigator url="/pages/jobs/details/details?scene=jobid%3D{{ item.id }}">{{ item.jobs_name }}</navigator>
+              <span>{{ item.wage_cn }}</span>
+            </view>
+            <view class="company_box">
+              <navigator url="/pages/company/details/details?scene=companyid%3D{{ item.company_id }}">[{{ item.district_cn }}] {{ item.companyname }}</navigator>
+              <span>{{ item.refreshtime_cn }}</span>
+            </view>
+          </view>
+        </block>
+      </block>
+    </swiper-item>
+
+    <swiper-item>
+      <block wx:for="{{ EmergencyJobList }}" wx:key="key">
+        <block wx:if="{{index>1&&index<4}}">
+          <view class="item" data-k="{{ index }}">
+            <view class="job_box">
+              <navigator url="/pages/jobs/details/details?scene=jobid%3D{{ item.id }}">{{ item.jobs_name }}</navigator>
+              <span>{{ item.wage_cn }}</span>
+            </view>
+            <view class="company_box">
+              <navigator url="/pages/company/details/details?scene=companyid%3D{{ item.company_id }}">[{{ item.district_cn }}] {{ item.companyname }}</navigator>
+              <span>{{ item.refreshtime_cn }}</span>
+            </view>
+          </view>
+        </block>
+      </block>
+    </swiper-item>
+
+    <swiper-item>
+      <block wx:for="{{ EmergencyJobList }}" wx:key="key">
+        <block wx:if="{{index>3}}">
+          <view class="item" data-k="{{ index }}">
+            <view class="job_box">
+              <navigator url="/pages/jobs/details/details?scene=jobid%3D{{ item.id }}">{{ item.jobs_name }}</navigator>
+              <span>{{ item.wage_cn }}</span>
+            </view>
+            <view class="company_box">
+              <navigator url="/pages/company/details/details?scene=companyid%3D{{ item.company_id }}">[{{ item.district_cn }}] {{ item.companyname }}</navigator>
+              <span>{{ item.refreshtime_cn }}</span>
+            </view>
+          </view>
+        </block>
+      </block>
+    </swiper-item>
+  </swiper>
+</view>
+<view class="ad" wx:for="{{ adList.m_home_103 }}" wx:key="key"> >
+  <block wx:if="{{ key==0 }}">
+    <image src="http://m.jiaoshizhaopin.net/{{ item.img_path }}" mode="widthFix" />
+  </block>
+</view>
+<view class="jobs_box">
+  <text class="box_title">最新教师招聘职位</text>
+  <view class="jobs_list">
+    <block wx:for="{{ JobList }}" wx:key="key">
+      <view class="jobs_item">
+        <view class="job_box">
+          <navigator url="/pages/jobs/details/details?scene=jobid%3D{{ item.id }}">{{ item.jobs_name }}</navigator>
+          <text>{{ item.wage_cn }}</text>
+        </view>
+        <view class="company_box">
+          <navigator url="/pages/company/details/details?scene=companyid%3D{{ item.company_id }}">[{{ item.district_cn }}] {{ item.companyname }}</navigator>
+          <text>{{ item.refreshtime_cn }}</text>
+        </view>
+      </view>
+    </block>
+    <navigator open-type="switchTab" class="more_list" url="/pages/jobs/list/list">更多职位招聘>></navigator>
+  </view>
+</view>
+<view wx:if="{{!empty(adList.m_home_105)}}" class="logo_ad_box">
+  <text class="box_title">品牌学校</text>
+  <block wx:for="{{ adList.m_home_105 }}" wx:key="key">
+    <view class="ad_item">
+      <image bindload='imgHeight' src="http://m.jiaoshizhaopin.net/{{ item.img_path }}" mode="widthFix" />
+    </view>
+  </block>
+</view>
+<view class="article_box">
+  <text class="box_title">最新教师招聘信息</text>
+  <view class="article_list">
+    <block wx:for="{{ articleList }}" wx:key="key">
+      <view class="article_item">
+        <navigator url="/pages/article/details/details?scene=articleid%3D{{ item.id }}">{{ item.title }}</navigator>
+        <text class="left">阅读{{ item.click }}</text>
+        <text class="right">{{ item.refreshtime_cn }}</text>
+      </view>
+    </block>
+  </view>
+  <navigator open-type="switchTab" class="more_list" url="/pages/article/list/list">更多招聘信息>></navigator>
+</view>
+<include src="/pages/public/footer" />

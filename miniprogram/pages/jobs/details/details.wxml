@@ -1,0 +1,43 @@
+<view class="job_name">
+  <text>{{ jobsDetails.jobs_name }}</text>
+</view>
+<view class="company_box">
+  <navigator url="/pages/company/details/details?scene=companyid%3D{{ jobsDetails.company_id }}">
+    <block wx:if="{{ companyDetails.logo }}">
+      <image class="company_logo" src="http://www.jiaoshizhaopin.net/data/logo/{{ companyDetails.logo }}" mode="widthFix" />
+    </block>
+    <block wx:else>
+      <image class="company_logo" src="/images/no_logo.jpg" mode="widthFix" />
+    </block>
+    <text class="company_name">{{ companyDetails.companyname }}</text>
+  </navigator>
+</view>
+<view class="job_box">
+  <view class="job_info">
+    <view class="wage">
+      <image src="/images/wage.png" class="info_icon" mode="widthFix" />
+      <text>{{ jobsDetails.wage_cn }}</text>
+    </view>
+    <view class="district">
+      <image src="/images/district.png" class="info_icon" mode="widthFix" />
+      <text>{{ jobsDetails.district_cn }}</text>
+    </view>
+    <view class="experience">
+      <image src="/images/experience.png" class="info_icon" mode="widthFix" />
+      <text>{{ jobsDetails.experience_cn }}</text>
+    </view>
+    <view class="education">
+      <image src="/images/education.png" class="info_icon" mode="widthFix" />
+      <text>{{ jobsDetails.education_cn }}</text>
+    </view>
+    <view class="job_des">
+      <text class="title">职位描述</text>
+      <text class="des">{{ jobsDetails.contents }}</text>
+    </view>
+    <block class="clear"></block>
+  </view>
+</view>
+<include src="/pages/public/footer" />
+<view class="delivery_box" bindtap="apply_job">
+  <button class="delivery">投递简历</button>
+</view>

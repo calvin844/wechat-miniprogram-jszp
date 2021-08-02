@@ -1,0 +1,137 @@
+/* miniprogram/pages/company/details/details.wxss */
+
+.top_box {
+  position: relative;
+}
+.top_box .top_bg {
+  width: 100%;
+}
+
+.logo_box {
+  margin: 0 0 20rpx 0rpx;
+}
+
+.logo_box image {
+  width: 300rpx;
+}
+
+.name_box {
+  margin: 0 0 10rpx 0;
+  text-align: center;
+  padding: 0px 10px 0px 10px;
+}
+
+.name_box .name {
+  font-size: 20px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.district_box {
+  margin: 0 0 20rpx 0;
+}
+
+.district_box .district {
+  font-size: 14px;
+  color: #fff;
+}
+
+.info_box {
+  position: absolute;
+  top: 5%;
+  padding: 0px 0px 30px 0px;
+  width:100%;
+}
+
+.top_info_box {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  height: 70%;
+}
+
+.info_box .bottom_info_box {
+  background: #fff;
+  width: calc(100% - 80rpx);
+  border-radius: 10px;
+  padding: 20px 10px 10px 10px;
+  border: 1px solid #e6e6e6;
+  margin: 20rpx;
+}
+
+.info_box .box_title {
+  font-size: 16px;
+  color: #333;
+  font-weight: bold;
+  margin: 0rpx 0 5rpx 0;
+  border-left: 3px solid #188eee;
+  padding: 0 0 0 5px;
+}
+
+.info_box .des_box {
+  margin: 0 0 20rpx 0;
+  display: block;
+}
+
+.info_box .des_box .box_content {
+  font-size: 14px;
+  color: #666;
+  margin: 10rpx 0 0 0;
+  display: block;
+  line-height: 50rpx;
+}
+
+.info_box .jobs_box {
+  margin: 0 0 20rpx 0;
+  display: block;
+  border-top: 1px solid #e5e5e5;
+  padding: 40rpx 0 0 0;
+  float: left;
+  width: 100%;
+}
+
+.info_box .jobs_box .jobs_item {
+  font-size: 14px;
+  color: #666;
+  margin: 10rpx 0 0 0;
+  display: block;
+  line-height: 50rpx;
+  float: left;
+  width: 100%;
+}
+
+.info_box .jobs_box .jobs_item text {
+  line-height: 70rpx;
+  float: left;
+  width: calc(100% - 10px);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.info_box .jobs_box .jobs_item text.job_go {
+  color: #999;
+  float: left;
+  display: inline-block;
+  width: 10px;
+}
+
+.info_box .photo_box {
+  margin: 0 0 20rpx 0;
+  display: block;
+  border-top: 1px solid #e5e5e5;
+  padding: 40rpx 0 0 0;
+}
+
+.info_box .photo_box swiper {
+  width: 100%;
+  height: 300rpx;
+  margin: 20rpx 0 0 0;
+  text-align: center;
+}
+
+.info_box .photo_box swiper .slide-image {
+  height: 300rpx;
+}

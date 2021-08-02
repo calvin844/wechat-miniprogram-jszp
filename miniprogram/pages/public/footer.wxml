@@ -1,0 +1,4 @@
+<view class="copyright">
+  <text>教师招聘网</text>
+  <text>Copyright © 2007-{{ now_year }} jiaoshizhaopin.net</text>
+</view>

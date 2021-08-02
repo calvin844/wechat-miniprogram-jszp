@@ -1,0 +1,65 @@
+<view class="top_box">
+	<view class="search_box">
+		<input type="text" class="key" placeholder="请输入关键字" confirm-type="search" bindconfirm='changeKeyword' value="{{curOption[2]}}" />
+		<image src="/images/search.png" />
+	</view>
+	<swiper indicator-dots="false" autoplay="true" interval="5000" duration="1000" style="height:{{swiperH}}">
+		<block wx:for="{{ adList.m_home_104 }}" wx:key="key">
+			<swiper-item>
+				<image bindload='imgHeight' src="http://m.jiaoshizhaopin.net/{{ item.img_path }}" mode="widthFix" />
+			</swiper-item>
+		</block>
+	</swiper>
+	<view class="select_box">
+		<view data-type="district" id="district_bt" class="select_bt {{curOption[0]?'hover':''}}">
+			<picker id="0" bindcancel="bindPickerCancel" mode="multiSelector" bindchange="bindMultiPickerChange" bindcolumnchange="bindMultiPickerColumnChange" value="{{districtIndex}}" range="{{districtList}}">
+				<view class="picker">
+					<text>{{curOption[0]?curOption[0]:"地区"}}</text>
+					<image src="{{curOption[0]?'/images/to_up2.png':'/images/to_down2.png'}}" />
+				</view>
+			</picker>
+		</view>
+		<view data-type="type" id="type_bt" class="select_bt {{curOption[1]?'hover':''}}">
+			<picker id="1" bindcancel="bindPickerCancel" bindchange="bindPickerChange" value="{{typeIndex}}" range="{{typeList}}">
+				<view class="picker">
+					<text>{{curOption[1]?curOption[1]:"性质"}}</text>
+					<image src="{{curOption[1]?'/images/to_up2.png':'/images/to_down2.png'}}" />
+				</view>
+			</picker>
+		</view>
+	</view>
+</view>
+<view class="list_box">
+	<ul>
+		<block wx:for="{{ companyList }}" wx:key="key">
+			<li>
+				<navigator url="/pages/company/details/details?scene=companyid%3D{{ item.id }}">
+					<text>{{ item.companyname }}</text>
+					<span class="left">{{ item.district_cn }}</span>
+					<span class="right">{{ item.refreshtime_cn }}</span>
+				</navigator>
+			</li>
+		</block>
+	</ul>
+	<view id="page_box">
+		<view class="per {{pageData.now_page == 1?'per_disable':''}}">
+			<button class="page_button" bindtap="changePage" data-value="{{pageData.per_page}}">
+				<image src="/images/to_left{{pageData.now_page == 1?'':'2'}}.png" />
+				<span>上一页</span>
+			</button>
+		</view>
+		<picker bindchange="bindPagePickerChange" value="{{pageIndex}}" range="{{pageData.page_list}}">
+			<view class="cur_box">
+				<text class="picker">第 {{ pageData.now_page }} 页</text>
+				<image src="/images/to_down3.png" />
+			</view>
+		</picker>
+		<view class="next {{pageData.now_page == pageData.totalpage?'next_disable':''}}">
+			<button class="page_button" bindtap="changePage" data-value="{{pageData.next_page}}">
+				<span>下一页</span>
+				<image src="/images/to_right{{pageData.now_page == pageData.totalpage?'':'2'}}.png" />
+			</button>
+		</view>
+	</view>
+</view>
+<include src="/pages/public/footer" />
